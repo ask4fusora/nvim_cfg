@@ -7,6 +7,11 @@ if not success then
     return
 end
 
+if vim.fn.executable('tree-sitter') == 0 then
+    vim.notify("`tree-sitter` is not an executable!", vim.log.levels.ERROR)
+    return
+end
+
 arborist.setup({
     update_cadence = "weekly",
     install_popular = true,

@@ -51,27 +51,35 @@ end
 
 ---@param formatter fsr.formatter.Formatter.External
 local function format_with_external_command(formatter)
-    local buffer_path = vim.api.nvim_buf_get_name(0)
+    local command = formatter.external.command
+    if vim.fn.executable(command) == 0 then
+        vim.notify(
+            ("`%s` is not an executable!"):format(command),
+            vim.log.levels.ERROR
+        )
+        return
+    end
 
-    local command = { formatter.external.command }
+    local argv = { command }
+    local buffer_path = vim.api.nvim_buf_get_name(0)
 
     for _, argument in ipairs(formatter.external.arguments or {}) do
         argument = argument:gsub("{buffer_path}", buffer_path)
-        command[#command + 1] = argument
+        argv[#argv + 1] = argument
     end
 
     local start_linenr, end_linenr = format_range()
     local stdin = vim.api.nvim_buf_get_lines(0, start_linenr, end_linenr, true)
 
-    local out = vim.system(command, {
+    local out = vim.system(argv, {
         text = true,
         stdin = stdin,
     }, function(out)
-        local stdout = out.stdout
-        out.stdout = stdout and require("util.ansi").strip(stdout)
-        local stderr = out.stderr
-        out.stderr = stderr and require("util.ansi").strip(stderr)
-    end):wait()
+            local stdout = out.stdout
+            out.stdout = stdout and require("util.ansi").strip(stdout)
+            local stderr = out.stderr
+            out.stderr = stderr and require("util.ansi").strip(stderr)
+        end):wait()
 
     if out.code ~= 0 then
         vim.notify(out.stderr, vim.log.levels.ERROR)
