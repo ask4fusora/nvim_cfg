@@ -1,13 +1,20 @@
 vim.lsp.enable({
-    "vtsls",
-    "biome",
-    "lua-language-server",
-    "json-language-server",
-    "tinymist",
-    "astro-language-server",
     "dprint",
+
+    "tsc",
+    -- astro is still incompatible with typescript@7.
+    -- "astro-language-server",
+    "biome",
+
     "moon-lsp",
+
+    "tinymist",
+
+    "lua-language-server",
+
     "nu",
+
+    "json-language-server",
     "yaml-language-server",
     "tombi",
 })
