@@ -64,4 +64,7 @@ return {
 
         return on_dir(node_compat_root or vim.fn.getcwd())
     end,
+    before_init = function()
+        require("lsp.adapter.typescript").setup_better_error()
+    end
 }
