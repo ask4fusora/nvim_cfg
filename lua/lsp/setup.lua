@@ -14,6 +14,8 @@ vim.lsp.enable({
 
     "nu",
 
+    "xmake",
+
     "json-language-server",
     "yaml-language-server",
     "tombi",

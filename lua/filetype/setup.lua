@@ -8,5 +8,6 @@ vim.filetype.add({
     },
     filename = {
         ["moon.pkg"] = "moonbit",
+        ["xmake.lua"] = "xmake",
     },
 })
