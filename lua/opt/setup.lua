@@ -20,6 +20,9 @@ vim.o.fillchars = table.concat({ "eob: " }, ",")
 
 vim.o.autoindent = true
 vim.o.smartindent = true
+vim.o.et = true
+vim.o.shiftwidth = 0
+vim.o.tabstop = 4
 
 -- Is filename.
 
