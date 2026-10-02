@@ -29,12 +29,11 @@ M.register_formatters({ "moonbit" }, {
     { language_server = { name = "moon-lsp" } },
 })
 
-M.register_formatters({ "lua" }, {
+M.register_formatters({ "lua", "xmake" }, {
     {
         external = {
             command = "stylua",
             arguments = {
-                "--syntax=LuaJit",
                 "--stdin-filepath={buffer_path}",
                 "-",
             },
