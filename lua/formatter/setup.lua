@@ -29,7 +29,11 @@ M.register_formatters({ "moonbit" }, {
     { language_server = { name = "moon-lsp" } },
 })
 
-M.register_formatters({ "lua", "xmake" }, {
+M.register_formatters({ "xmake" }, {
+    { language_server = { name = "xmake" } },
+})
+
+M.register_formatters({ "lua" }, {
     {
         external = {
             command = "stylua",
