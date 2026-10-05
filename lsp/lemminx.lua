@@ -5,6 +5,12 @@ return {
     root_markers = { ".git" },
     settings = {
         xml = {
+            server = {
+                workDir = "~/.cache/lemminx",
+            },
+            logs = {
+                file = "~/.cache/lemminx/logs/lemminx.log",
+            },
             fileAssociations = {
                 {
                     pattern = "**/*.wsb",
