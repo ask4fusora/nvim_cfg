@@ -6,10 +6,10 @@ return {
     settings = {
         xml = {
             server = {
-                workDir = "~/.cache/lemminx",
+                workDir = vim.fn.expand("~/.cache/lemminx"),
             },
             logs = {
-                file = "~/.cache/lemminx/logs/lemminx.log",
+                file = vim.fn.expand("~/.cache/lemminx/logs/lemminx.log"),
             },
             fileAssociations = {
                 {
