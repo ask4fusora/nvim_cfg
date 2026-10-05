@@ -16,6 +16,7 @@ vim.lsp.enable({
 
     "xmake",
 
+    "lemminx",
     "json-language-server",
     "yaml-language-server",
     "tombi",

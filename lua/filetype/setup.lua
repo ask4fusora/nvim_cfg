@@ -5,10 +5,11 @@ vim.filetype.add({
         moonbit = "moonbit",
         mbtp = "moonbit_mbtp",
         nuon = "nuon",
+        wsb = "xml",
     },
     filename = {
         ["moon.pkg"] = "moonbit",
         ["xmake.lua"] = "xmake",
-        [".wslconfig"] = "ini"
+        [".wslconfig"] = "ini",
     },
 })
