@@ -51,6 +51,10 @@ M.register_formatters({ "typescriptreact", "typescript" }, {
     { code_action = "source.fixAll.biome" },
 })
 
+M.register_formatters({ "toml" }, {
+    { language_server = { name = "tombi" } },
+})
+
 M.register_formatters({ "json", "jsonc" }, {
     { language_server = { name = "json-language-server" } },
 })
