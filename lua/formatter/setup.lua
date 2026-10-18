@@ -56,7 +56,15 @@ M.register_formatters({ "toml" }, {
 })
 
 M.register_formatters({ "json", "jsonc" }, {
-    { language_server = { name = "json-language-server" } },
+    {
+        external = {
+            command = "dprint",
+            arguments = {
+                "fmt",
+                "--stdin=jsonc",
+            },
+        },
+    },
 })
 
 M.register_formatters({ "markdown" }, {
