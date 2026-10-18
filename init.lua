@@ -17,6 +17,7 @@ initializer.require_modules(nil, {
     "plugin.setup",
     "keymap.setup",
     "appearance.setup",
+    "notification.setup",
     "filetype.setup",
 })
 
@@ -30,7 +31,6 @@ initializer.register({
             "statusline.setup",
             "file_explorer.setup",
             "picker.fff.setup",
-            "notification.setup",
             "autocmd.open_quick_fix_list_post_grep.setup",
             "user_command.neovim_open_settings.setup",
             "user_command.vim_pack_remove_inactive.setup",
