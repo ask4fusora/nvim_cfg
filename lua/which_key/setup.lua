@@ -22,6 +22,7 @@ miniclue.setup({
         { mode = "v", keys = "a" },
         { mode = "n", keys = "g" },
         { mode = "v", keys = "g" },
+        { mode = "n", keys = "d" },
         { mode = "n", keys = "[" },
         { mode = "n", keys = "]" },
         { mode = "n", keys = "<C-G>" },
