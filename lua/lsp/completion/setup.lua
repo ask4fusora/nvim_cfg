@@ -11,6 +11,10 @@ mc.setup({
     -- NOTE: Mimicking `disable_completion_on_type`.
     delay = { completion = 1000000 },
     lsp_completion = { source_func = "omnifunc" },
+    mappings = {
+        scroll_up = "<C-u>",
+        scroll_down = "<C-d>",
+    },
 })
 
 vim.o.omnifunc = "v:lua.MiniCompletion.completefunc_lsp"
