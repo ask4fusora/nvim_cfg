@@ -29,6 +29,10 @@ vim.o.tabstop = 4
 vim.o.shellslash = true
 vim.o.isfname = table.concat({ vim.o.isfname, "(", ")" }, ",")
 
+-- Path.
+
+vim.opt.path = { ".", "", "**" }
+
 -- List chars.
 
 vim.o.list = true
@@ -73,4 +77,5 @@ vim.o.autocomplete = false
 vim.o.completeopt = "fuzzy,menuone,noselect"
 
 -- Vim mode.
+
 vim.o.showmode = false

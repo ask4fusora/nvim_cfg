@@ -2,6 +2,8 @@ local keymap = require("keymap")
 
 vim.g.mapleader = " "
 
+keymap.set_cabbrev("vfind", "vertical sfind")
+
 keymap.set_cabbrev("grep", "silent grep!")
 
 keymap.set_cabbrev("ls", "PickBuffer")
