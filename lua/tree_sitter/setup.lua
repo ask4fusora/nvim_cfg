@@ -20,6 +20,7 @@ arborist.setup({
     install_popular = true,
     ensure_installed = {
         "moonbit",
+        "comment",
         "moonbit_mbtp",
         "markdown",
         "markdown_inline",
