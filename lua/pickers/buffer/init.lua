@@ -79,12 +79,12 @@ local function picker_dimensions(lines)
     return width, height
 end
 
----@class fsr.picker.buffer.open_picker_win.InitOpts
+---@class fsr.pickers.buffer.open_picker_win.InitOpts
 ---@field width integer
 ---@field height integer
 
 ---@param picker_bufnr integer
----@param init_opts fsr.picker.buffer.open_picker_win.InitOpts
+---@param init_opts fsr.pickers.buffer.open_picker_win.InitOpts
 local function open_picker_win(picker_bufnr, init_opts)
     local invocation_bufnr = api.nvim_get_current_buf()
     ---@type integer|nil
@@ -232,7 +232,7 @@ end
 local function set_picker_autocmd(picker_winid, picker_bufnr)
     vim.api.nvim_create_autocmd("BufWritePost", {
         group = vim.api.nvim_create_augroup(
-            "fsr.picker.buffer.UpdatePicker",
+            "fsr.pickers.buffer.UpdatePicker",
             { clear = true }
         ),
         callback = function()

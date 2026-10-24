@@ -76,9 +76,9 @@ local function format_with_external_command(formatter)
         stdin = stdin,
     }, function(out)
             local stdout = out.stdout
-            out.stdout = stdout and require("util.ansi").strip(stdout)
+            out.stdout = stdout and require("utils.ansi").strip(stdout)
             local stderr = out.stderr
-            out.stderr = stderr and require("util.ansi").strip(stderr)
+            out.stderr = stderr and require("utils.ansi").strip(stderr)
         end):wait()
 
     if out.code ~= 0 then

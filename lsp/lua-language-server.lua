@@ -21,11 +21,11 @@ local root_markers = {
 local dotnvim = require("project_settings").PROJECT_SETTINGS_FOLDER_NAME
 
 local function is_in_dotnvim(path)
-    return require("util.path").contains_folder(path, dotnvim)
+    return require("utils.path").contains_folder(path, dotnvim)
 end
 
 local function is_in_config_stdpath(path)
-    return require("util.string").starts_with(path, vim.fn.stdpath("config"))
+    return require("utils.string").starts_with(path, vim.fn.stdpath("config"))
 end
 
 ---@param params lsp.InitializeParams

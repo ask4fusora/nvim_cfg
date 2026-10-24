@@ -30,11 +30,11 @@ initializer.register({
             "appearance.icon.setup",
             "statusline.setup",
             "file_explorer.setup",
-            "picker.fff.setup",
-            "autocmd.open_quick_fix_list_post_grep.setup",
-            "user_command.neovim_open_settings.setup",
-            "user_command.vim_pack_remove_inactive.setup",
-            "user_command.pick_buffer.setup",
+            "pickers.fff.setup",
+            "autocmds.open_quick_fix_list_post_grep.setup",
+            "user_commands.neovim_open_settings.setup",
+            "user_commands.vim_pack_remove_inactive.setup",
+            "user_commands.pick_buffer.setup",
             "which_key.setup",
         },
     },
@@ -59,7 +59,7 @@ initializer.register({
         event = "FileType",
         pattern = "typst",
         module_names = {
-            "ftplugin.typst.setup",
+            "ftplugins.typst.setup",
         },
     },
     {
@@ -67,14 +67,14 @@ initializer.register({
         pattern = { "nu", "nuon" },
         once = false,
         module_names = {
-            "ftplugin.nu.editorconfig.setup",
+            "ftplugins.nu.editorconfig.setup",
         },
     },
     {
         event = "BufEnter",
         module_names = {
             "formatter.setup",
-            "autocmd.highlight_on_yank.setup",
+            "autocmds.highlight_on_yank.setup",
         },
     },
 })

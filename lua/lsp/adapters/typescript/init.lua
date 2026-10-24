@@ -1,6 +1,6 @@
 local M = {}
 
-M.setup_better_error = require("util.functional").exec_once(function()
+M.setup_better_error = require("utils.functional").exec_once(function()
     local success, bte = pcall(require, "ts-error-translator")
     if not success then
         vim.notify(

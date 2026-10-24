@@ -1,6 +1,6 @@
 vim.api.nvim_create_autocmd("QuickFixCmdPost", {
     group = vim.api.nvim_create_augroup(
-        "fsr.autocmd.OpenQuickFixListPostGrep",
+        "fsr.autocmds.OpenQuickFixListPostGrep",
         { clear = true }
     ),
     pattern = "grep",

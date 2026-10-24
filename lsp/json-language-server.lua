@@ -1,6 +1,6 @@
 ---@type vim.lsp.Config
 return {
-    cmd = require("lsp.adapter.node_modules").cmd(
+    cmd = require("lsp.adapters.node_modules").cmd(
         "vscode-json-language-server"
     ),
     filetypes = { "json", "jsonc" },

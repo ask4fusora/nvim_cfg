@@ -1,6 +1,6 @@
 ---@type vim.lsp.Config
 return {
-    cmd = require("lsp.adapter.node_modules").cmd("biome", { "lsp-proxy" }),
+    cmd = require("lsp.adapters.node_modules").cmd("biome", { "lsp-proxy" }),
     filetypes = {
         "astro",
         "css",
