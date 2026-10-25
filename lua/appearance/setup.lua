@@ -30,7 +30,7 @@ onedarkpro.setup({
     options = {
         transparency = (
             type(vim.env.MY_TRANSPARENCY_ALPHA) == "string"
-            and tonumber(vim.env.MY_TRANSPARENCY_ALPHA) ~= 0
+            and tonumber(vim.env.MY_TRANSPARENCY_ALPHA) ~= 1
         ),
     },
 })
