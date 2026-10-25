@@ -21,6 +21,7 @@ onedarkpro.setup({
     highlights = {
         StatusLine = {},
         StatusLineNC = {},
+        -- The left part of the cursor line. I don't want any background color there.
         CursorLineNr = { bg = "NONE", extend = true },
         CursorLineSign = { bg = "NONE" },
         SignColumn = { bg = "NONE" },
