@@ -1,6 +1,6 @@
 local DEBOUNCE_DELAY_MS = 100
 
-local debounce_fn = require("neovim.util").debounce_fn
+local debounce_fn = require("neovim.utils").debounce_fn
 
 ---@type integer?
 local under_cursor_request_id = nil

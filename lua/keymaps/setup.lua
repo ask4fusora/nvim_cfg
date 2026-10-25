@@ -1,4 +1,4 @@
-local keymap = require("keymap")
+local keymap = require("keymaps")
 
 vim.g.mapleader = " "
 

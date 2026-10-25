@@ -7,15 +7,15 @@ initializer.register({
         event = "PackChanged",
         once = false,
         module_names = {
-            "plugin.fff.setup",
+            "plugins.fff.setup",
         },
     },
 })
 
 initializer.require_modules(nil, {
-    "tweak.setup",
-    "plugin.setup",
-    "keymap.setup",
+    "customizations.setup",
+    "plugins.setup",
+    "keymaps.setup",
     "appearance.setup",
     "notification.setup",
     "filetype.setup",
@@ -44,7 +44,7 @@ initializer.register({
             "lsp.completion.setup",
             "lsp.diagnostic.setup",
             "lsp.document_highlight.setup",
-            "lsp.keymap.setup",
+            "lsp.keymaps.setup",
         },
     },
     {
