@@ -18,17 +18,26 @@ miniclue.setup({
     triggers = {
         { mode = "n", keys = "<Leader>" },
         { mode = "v", keys = "<Leader>" },
+
         { mode = "v", keys = "i" },
         { mode = "v", keys = "a" },
+
+        { mode = "n", keys = "z" },
+
         { mode = "n", keys = "g" },
         { mode = "v", keys = "g" },
+
         { mode = "n", keys = "d" },
+
         { mode = "n", keys = "[" },
+        { mode = "v", keys = "[" },
         { mode = "n", keys = "]" },
-        { mode = "n", keys = "<C-G>" },
-        { mode = "v", keys = "<C-G>" },
+        { mode = "v", keys = "]" },
+
         { mode = "v", keys = "<C-K>" },
+
         { mode = "n", keys = "<C-W>" },
+
         { mode = "i", keys = "<C-X>" },
     },
 
