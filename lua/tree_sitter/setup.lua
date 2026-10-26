@@ -22,7 +22,6 @@ arborist.setup({
         "comment",
         "moonbit",
         "moonbit_mbtp",
-        "moonbit_quotation",
         "markdown",
         "markdown_inline",
         "typst",
