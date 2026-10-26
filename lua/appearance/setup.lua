@@ -17,6 +17,11 @@ if not success then
     return
 end
 
+local allows_transparency = (
+    type(vim.env.MY_TRANSPARENCY_ALPHA) == "string"
+    and tonumber(vim.env.MY_TRANSPARENCY_ALPHA) ~= 1
+)
+
 onedarkpro.setup({
     highlights = {
         StatusLine = {},
@@ -28,10 +33,8 @@ onedarkpro.setup({
     },
 
     options = {
-        transparency = (
-            type(vim.env.MY_TRANSPARENCY_ALPHA) == "string"
-            and tonumber(vim.env.MY_TRANSPARENCY_ALPHA) ~= 1
-        ),
+        cursorline = not allows_transparency,
+        transparency = allows_transparency,
     },
 })
 
