@@ -44,6 +44,7 @@ initializer.register({
             "lsp.completion.setup",
             "lsp.diagnostic.setup",
             "lsp.document_highlight.setup",
+            "lsp.linked_editing_range.setup",
             "lsp.keymaps.setup",
         },
     },
