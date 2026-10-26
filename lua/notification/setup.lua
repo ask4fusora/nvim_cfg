@@ -12,3 +12,5 @@ mn.setup({
         max_width_share = 0.618,
     },
 })
+
+vim.api.nvim_create_user_command("NotificationHistory", mn.show_history, {})
