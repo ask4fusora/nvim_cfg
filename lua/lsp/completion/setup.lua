@@ -8,7 +8,7 @@ if not success then
 end
 
 mc.setup({
-    -- NOTE: Mimicking `disable_completion_on_type`.
+    -- Mimicking `disable_completion_on_type`.
     delay = { completion = 1000000 },
     lsp_completion = { source_func = "omnifunc" },
     mappings = {
