@@ -1,13 +1,3 @@
-local color_theme = "onedark"
-vim.o.background = "dark"
-
----@type string|nil
-local system_theme = vim.env.SYSTEM_THEME
-if system_theme and system_theme:find("Light") then
-    color_theme = "onelight"
-    vim.o.background = "light"
-end
-
 local success, onedarkpro = pcall(require, "onedarkpro")
 if not success then
     vim.notify(
@@ -38,4 +28,18 @@ onedarkpro.setup({
     },
 })
 
-vim.cmd.colorscheme(color_theme)
+local color_scheme = {
+    dark = "onedark",
+    light = "onelight",
+}
+
+---@type "dark"|"light"
+local color_mode = vim.env.MY_COLOR_MODE or "dark"
+
+if color_mode == "light" then
+    vim.o.background = "light"
+    vim.cmd.colorscheme(color_scheme.light)
+else
+    vim.o.background = "dark"
+    vim.cmd.colorscheme(color_scheme.dark)
+end
