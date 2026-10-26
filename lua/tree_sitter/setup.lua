@@ -19,9 +19,10 @@ arborist.setup({
     automatic_install = false,
     install_popular = true,
     ensure_installed = {
-        "moonbit",
         "comment",
+        "moonbit",
         "moonbit_mbtp",
+        "moonbit_quotation",
         "markdown",
         "markdown_inline",
         "typst",
@@ -48,13 +49,6 @@ arborist.setup({
         "bash",
     },
     overrides = {
-        moonbit = {
-            url = "https://github.com/moonbitlang/tree-sitter-moonbit",
-        },
-        moonbit_mbtp = {
-            url = "https://github.com/moonbitlang/tree-sitter-moonbit",
-            location = "grammars/mbtp",
-        },
         nuon = {
             url = "https://github.com/melMass/tree-sitter-nuon",
         },
