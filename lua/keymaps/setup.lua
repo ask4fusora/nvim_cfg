@@ -12,6 +12,13 @@ vim.keymap.set({ "n", "v" }, "<C-s>", function()
     vim.cmd("silent w")
 end)
 
+vim.keymap.set(
+    "n",
+    "ZT",
+    "ZZ",
+    { remap = true }
+)
+
 vim.keymap.set("n", "<M-F>", function()
     local formatters = fsr.formatter.formatters_by_filetype[vim.bo.filetype]
     require("formatter").format(formatters)
