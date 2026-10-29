@@ -48,6 +48,13 @@ arborist.setup({
         "bash",
     },
     overrides = {
+        moonbit = {
+            url = "https://github.com/moonbitlang/tree-sitter-moonbit",
+        },
+        moonbit_mbtp = {
+            url = "https://github.com/moonbitlang/tree-sitter-moonbit",
+            location = "grammars/mbtp",
+        },
         nuon = {
             url = "https://github.com/melMass/tree-sitter-nuon",
         },
