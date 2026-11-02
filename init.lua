@@ -65,6 +65,14 @@ initializer.register({
     },
     {
         event = "FileType",
+        pattern = { "markdown" },
+        once = false,
+        module_names = {
+            "ftplugins.markdown.editorconfig.setup",
+        },
+    },
+    {
+        event = "FileType",
         pattern = { "nu", "nuon" },
         once = false,
         module_names = {
