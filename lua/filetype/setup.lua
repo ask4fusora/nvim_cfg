@@ -1,5 +1,6 @@
 vim.filetype.add({
     extension = {
+        bat = "batch",
         mbt = "moonbit",
         mbti = "moonbit",
         moonbit = "moonbit",

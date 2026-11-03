@@ -45,9 +45,11 @@ arborist.setup({
         "json",
         "nu",
         "powershell",
+        "batch",
         "bash",
     },
     overrides = {
+        batch = { url = "https://github.com/wharflab/tree-sitter-batch" },
         moonbit = {
             url = "https://github.com/moonbitlang/tree-sitter-moonbit",
         },
