@@ -53,11 +53,9 @@ arborist.setup({
         "powershell",
         "batch",
         "bash",
-        "cobol",
     },
     overrides = {
         batch = { url = "https://github.com/wharflab/tree-sitter-batch" },
-        cobol = { url = "https://github.com/Spantree/tree-sitter-cobol-enterprise" },
         moonbit = {
             url = "https://github.com/moonbitlang/tree-sitter-moonbit",
         },
