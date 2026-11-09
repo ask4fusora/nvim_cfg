@@ -22,7 +22,6 @@ arborist.setup({
     install_popular = true,
     ensure_installed = {
         "comment",
-        "cobol",
         "moonbit",
         "moonbit_mbtp",
         "markdown",
@@ -54,6 +53,7 @@ arborist.setup({
         "powershell",
         "batch",
         "bash",
+        "cobol",
     },
     overrides = {
         batch = { url = "https://github.com/wharflab/tree-sitter-batch" },
