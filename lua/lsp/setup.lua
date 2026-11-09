@@ -1,14 +1,7 @@
 vim.lsp.enable({
-    "dprint",
-
     "tsc",
-    -- astro is still incompatible with typescript@7.
-    -- "astro-language-server",
-    "biome",
 
     "moon-lsp",
-
-    "tinymist",
 
     "lua-language-server",
 
@@ -16,8 +9,10 @@ vim.lsp.enable({
 
     "xmake",
 
-    "lemminx",
+    "tinymist",
+
     "json-language-server",
+    "lemminx",
     "yaml-language-server",
     "tombi",
 })

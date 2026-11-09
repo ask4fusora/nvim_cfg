@@ -17,6 +17,9 @@ local root_markers = {
     { ".git" },
 }
 
+-- TODO: Abstract project settings lsp setting away. Either by making another
+-- lsp profile, or abstract to an lsp adapter.
+
 ---Project settings folder name.
 local dotnvim = require("project_settings").PROJECT_SETTINGS_FOLDER_NAME
 
