@@ -14,12 +14,15 @@ end
 
 vim.treesitter.language.register("lua", "xmake")
 
+-- TODO: mojo tree-sitter
+
 arborist.setup({
     update_cadence = "weekly",
     automatic_install = false,
     install_popular = true,
     ensure_installed = {
         "comment",
+        "cobol",
         "moonbit",
         "moonbit_mbtp",
         "markdown",
@@ -31,9 +34,12 @@ arborist.setup({
         "rust",
         "c",
         "cpp",
+        "c_sharp",
+        "go",
         "php",
         "ruby",
         "odin",
+        "c3",
         "sql",
         "lua",
         "luap",
@@ -44,12 +50,14 @@ arborist.setup({
         "toml",
         "json",
         "nu",
+        "julia",
         "powershell",
         "batch",
         "bash",
     },
     overrides = {
         batch = { url = "https://github.com/wharflab/tree-sitter-batch" },
+        cobol = { url = "https://github.com/Spantree/tree-sitter-cobol-enterprise" },
         moonbit = {
             url = "https://github.com/moonbitlang/tree-sitter-moonbit",
         },
