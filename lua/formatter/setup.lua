@@ -17,6 +17,15 @@ M.register_formatters({ "typst" }, {
     { language_server = { name = "tinymist" } },
 })
 
+M.register_formatters({ "sh" }, {
+    {
+        external = {
+            command = "shfmt",
+            arguments = { "--posix", "--simplify" },
+        },
+    },
+})
+
 M.register_formatters({ "nu", "nuon" }, {
     { external = { command = "nufmt", arguments = { "--stdin" } } },
 })
