@@ -31,7 +31,6 @@ initializer.register({
             "statusline.setup",
             "file_explorer.setup",
             "pickers.fff.setup",
-            "autocmds.open_quick_fix_list_post_grep.setup",
             "user_commands.neovim_open_settings.setup",
             "user_commands.vim_pack_remove_inactive.setup",
             "user_commands.pick_buffer.setup",
