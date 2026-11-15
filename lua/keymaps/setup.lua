@@ -6,9 +6,7 @@ keymap.set_cabbrev("vfind", "vertical sfind")
 
 keymap.set_cabbrev("ls", "PickBuffer")
 
-vim.keymap.set({ "n", "v" }, "<C-s>", function()
-    vim.cmd("silent w")
-end)
+vim.keymap.set({ "n", "v" }, "<C-s>", vim.cmd.w)
 
 vim.keymap.set("n", "ZT", "ZZ", { remap = true })
 
