@@ -18,7 +18,7 @@ local function term_buffers()
 end
 
 ---@return integer[]
-local function opened_term_windows()
+local function opened_term_winnrs()
     return vim.iter(vim.api.nvim_tabpage_list_wins(0))
         :filter(function(win)
             ---@cast win integer
@@ -43,7 +43,7 @@ local function open_term(buf)
     vim.api.nvim_win_set_buf(win, buf)
 end
 
-local function create_term()
+local function create_then_open_term()
     vim.ui.input({ prompt = ":term " }, function(cmd)
         if cmd == nil then
             return
@@ -61,7 +61,7 @@ local function create_term()
 end
 
 ---@param bufnrs integer[]
-local function select_and_open_term(bufnrs)
+local function select_then_open_term(bufnrs)
     vim.ui.select(bufnrs, {
         prompt = ":b ",
         format_item = function(bufnr)
@@ -89,7 +89,7 @@ local function hide_wins(winnrs)
 end
 
 function M.toggle()
-    local winnrs = opened_term_windows()
+    local winnrs = opened_term_winnrs()
     if #winnrs > 0 then
         hide_wins(winnrs)
         return
@@ -98,12 +98,14 @@ function M.toggle()
     local term_bufnrs = term_buffers()
 
     if #term_bufnrs == 0 then
-        create_term()
+        create_then_open_term()
     elseif #term_bufnrs == 1 then
         open_term(term_bufnrs[1])
     else
-        select_and_open_term(term_bufnrs)
+        select_then_open_term(term_bufnrs)
     end
+
+    vim.cmd.startinsert()
 end
 
 return M
