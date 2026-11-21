@@ -17,6 +17,7 @@ vim.treesitter.language.register("lua", "xmake")
 -- TODO: mojo tree-sitter
 
 arborist.setup({
+    prefer_wasm = false,
     update_cadence = "weekly",
     automatic_install = false,
     install_popular = true,
